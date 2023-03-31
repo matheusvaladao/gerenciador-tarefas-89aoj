@@ -21,6 +21,6 @@ export default function Index() {
   }
 
   return (
-      accessToken ? <Home/> : <Login setAccessToken={setAccessToken} />      
+      accessToken ? <Home setAccessToken={setAccessToken} /> : <Login setAccessToken={setAccessToken} />      
   )
 }
