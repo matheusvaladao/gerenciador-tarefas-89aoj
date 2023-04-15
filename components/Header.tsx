@@ -19,10 +19,10 @@ export const Header : NextPage<HeaderProps> = ({setAccessToken}) => {
     return (
         <div className="container-header">
             <img src="logo.svg" alt="Logo Fiap" className='logo' />
-            <button onClick={sair}><strong>+</strong> Adicionar tarefa</button>
+            <button><strong>+</strong> Adicionar tarefa</button>
             <div>
                 <span>Olá, {firstName}</span>
-                <img src={mobile ? 'exit-mobile.svg' : 'exit-desktop.svg'} alt="Sair"/>
+                <img onClick={sair} src={mobile ? 'exit-mobile.svg' : 'exit-desktop.svg'} alt="Sair"/>
             </div>
         </div>
     )
