@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { NextPage } from "next";
 import { Header } from "@/components/Header"
 import { Filter } from '@/components/Filter';
-import { NextPage } from "next";
+import { Footer } from '@/components/Footer';
 
 type HomeProps = {
     setAccessToken(s: string): void
@@ -24,6 +25,7 @@ export const Home: NextPage<HomeProps> = ({ setAccessToken }) => {
                 status={status}
                 setStatus={setStatus}
             />
+            <Footer />
         </>
     );
 }
