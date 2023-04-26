@@ -52,14 +52,13 @@ export const Filter: NextPage<FilterProps> = ({
 
                 
                     <div>
-                        <label>Data prevista de conclusão:</label>
+                        <label>Encerramento de:</label>
                         <input type="date" value={previsionDateStart} onChange={e => setPrevisionDateStart(e.target.value)} />
                     </div>
                     <div>
-                        <label>até</label>
+                        <label>Encerramento até:</label>
                         <input type="date" value={previsionDateEnd} onChange={e => setPrevisionDateEnd(e.target.value)} />
                     </div>
-                    <div className='separator' />
                     <div>
                         <label>Status</label>
                         <select value={status} onChange={e => setStatus(parseInt(e.target.value))}>
