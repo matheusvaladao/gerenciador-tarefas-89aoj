@@ -34,7 +34,7 @@ export const List: NextPage<ListProps> = ({ list, getList }) => {
 
             setErrorMsg('');
 
-            if (!id || !name || !finishPrevisionDate || !finishDate) {
+            if (!id || !name || !finishPrevisionDate) {
                 setErrorMsg('Favor preencher os campos!');
                 return
             }
