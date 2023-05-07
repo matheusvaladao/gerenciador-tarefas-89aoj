@@ -1,51 +1,46 @@
-@import "./config.scss";
+@import './config.scss';
 
-.container-filter {
-    margin-top: 16px;
+.container-filter{
     display: flex;
+    width: 96%;
     flex-direction: column;
-    width: 95%;
-    background-color: $lightGreyColor;
+    margin-top: 16px;
+    background-color: $mediumGreyColorOpacity;
     border-radius: 12px;
-    padding: 10px;
+    padding: 10px 15px;
 
-    .title {
+    .title{
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        span {
-            font-size: 18px;
-            color: $primaryColor;
-            letter-spacing: 0.01em;
-            font-weight: bold;
-        }
-
-        img {
-            cursor: pointer;
-        }
-
-        .form {
+        .form{
             display: none;
+        }
+
+        span{
+            color: $primaryColor;
+            font-size: 18px;
+            font-weight: bold;
         }
     }
 
-    .mobile-filter {
+    .mobile-filters{
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        margin-top: 10px;
+        margin-top: 16px;
 
-        div {
+        div{
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             padding-bottom: 8px;
 
-            label {
+            label{
                 color: $primaryColor;
-                font-size: 16px;
-                margin-bottom: 0px;
+                font-size: 14px;
+                margin-bottom: 0;
                 margin-right: 15px;
             }
         }
@@ -54,30 +49,29 @@
     @media screen and (min-width: $mediaQueryDesktop) {
         padding: 20px;
 
-        .mobile-filter {
+        .mobile-filters{
             display: none;
         }
 
-        .title {
-            img {
+        .title{
+            img{
                 display: none;
             }
 
-            .form {
+            .form{
                 display: flex;
                 align-items: center;
                 justify-content: center;
 
-                label {
+                label{
                     color: $primaryColor;
-                    font-size: 16px;
+                    font-size: 14px;
                     margin-left: 10px;
+                    margin-bottom: 0;
                     margin-right: 15px;
-                    margin-bottom: 0px;
                 }
 
-                input,
-                select {
+                input, select{
                     border-color: $primaryColor;
                 }
 
@@ -87,8 +81,8 @@
 
                 .separator {
                     border: 1px solid $primaryColor;
+                    width: 0;
                     height: 40px;
-                    width: 0px;
                     margin-left: 15px;
                 }
             }

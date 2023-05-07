@@ -4,16 +4,16 @@ import { Task } from '../types/Task';
 
 type ItemProps = {
     task: Task,
-    endTask(task: Task): void
+    selectTask(t: Task): void
 }
 
-export const Item: NextPage<ItemProps> = ({ task, endTask }) => {
+export const Item: NextPage<ItemProps> = ({ task, selectTask }) => {
 
     const isTaskFinished = task.finishDate || false;
 
     return (
-        <div className={'container-item' + (isTaskFinished ? '' : ' active')}>
-            <img onClick={() => endTask(task)} src={isTaskFinished ? 'checked.svg' : 'not-checked.svg'} alt={isTaskFinished ? 'Tarefa em aberto' : 'Tarefa concluída'} />
+        <div className={'container-item' + (isTaskFinished ? '' : ' active')} onClick={() => isTaskFinished ? null : selectTask(task)}>
+            <img src={isTaskFinished ? 'checked.svg' : 'not-checked.svg'} alt={isTaskFinished ? 'Tarefa em aberto' : 'Tarefa concluída'} />
             <div>
                 <p className={isTaskFinished ? 'finished' : ''}>{task.name}</p>
                 <span>{

@@ -1,19 +1,18 @@
 @import './config.scss';
 
-.container-item{
-
+.container-item {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 95%;
-    background-color: $lightGreyColor;
+    background-color: $mediumGreyColorOpacity;
     border-radius: 12px;
     padding: 10px;
     margin-top: 10px;
     height: 55px;
-    border-color: $lightGreyColor;
-    border-style: solid;
-    border-width: 1px;
+    width: 96%;
+    
+    border: 1px solid $mediumGreyColorOpacity;
+    cursor: auto;
 
     img{
         width: 18px;
@@ -22,10 +21,10 @@
     }
 
     div{
-        p{
-            margin: 0px;
+        P{
+            margin: 0;
             color: $darkGreyColor;
-            font-weight: bold;
+            font-weight: 800;
             font-size: 15px;
 
             &.finished{
@@ -35,21 +34,19 @@
 
         span{
             color: $darkGreyColor;
-            font-weight: normal;
             font-size: 13px;
         }
     }
 
     @media screen and (min-width: $mediaQueryDesktop) {
-
         margin-top: 15px;
-        height: 70px;
-        
+        height: 65px;
+
         &.active{
             cursor: pointer;
 
             &:hover{
-                border-color: $primaryColor;
+                border: 1px solid $primaryColor;
             }
         }
 
@@ -58,16 +55,15 @@
             height: 20px;
             margin-right: 20px;
         }
-    
+
         div{
             p{
                 font-size: 18px;
             }
-    
+
             span{
                 font-size: 15px;
             }
         }
     }
-
 }

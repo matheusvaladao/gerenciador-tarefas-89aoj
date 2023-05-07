@@ -1,10 +1,11 @@
 import type { NextPage } from "next";
 
 type HeaderProps = {
-    setAccessToken(s: string) : void
+    setAccessToken(s: string): void
+    showModal(): void
 }
 
-export const Header : NextPage<HeaderProps> = ({setAccessToken}) => {
+export const Header: NextPage<HeaderProps> = ({ setAccessToken, showModal }) => {
 
     const mobile = window.innerWidth < 954;
 
@@ -19,10 +20,10 @@ export const Header : NextPage<HeaderProps> = ({setAccessToken}) => {
     return (
         <div className="container-header">
             <img src="logo.svg" alt="Logo Fiap" className='logo' />
-            <button><strong>+</strong> Adicionar tarefa</button>
+            <button onClick={showModal}><strong>+</strong> Adicionar tarefa</button>
             <div>
                 <span>Olá, {firstName}</span>
-                <img onClick={sair} src={mobile ? 'exit-mobile.svg' : 'exit-desktop.svg'} alt="Sair"/>
+                <img onClick={sair} src={mobile ? 'exit-mobile.svg' : 'exit-desktop.svg'} alt="Sair" />
             </div>
         </div>
     )
